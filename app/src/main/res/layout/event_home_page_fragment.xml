@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@android:color/holo_green_dark"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--Header-->
+            <LinearLayout
+                android:layout_gravity="top"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:background="@android:color/darker_gray"
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@android:drawable/ic_lock_lock"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:textStyle="bold"
+                        android:text="Events App"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@android:drawable/ic_btn_speak_now"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:textStyle="bold"
+                        android:text="Events App"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:background="@android:color/darker_gray"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.SearchView
+                    android:queryHint="search by event category"
+                    android:id="@+id/track_event_searchview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!-- Main -->
+            <LinearLayout
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:background="@android:color/darker_gray"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!-- Detail-->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:text="Toppr Adroid List Item"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <android.support.v7.widget.RecyclerView
+                        android:background="@android:color/darker_gray"
+                        android:id="@+id/track_event_homepage_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:id="@+id/btnLay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+                            <Button
+                                android:text="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <Button
+                                android:text="2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <Button
+                                android:text="4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <Button
+                                android:text="5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <Button
+                                android:text="6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <Button
+                                android:text="7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!-- Footer-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:background="@android:color/darker_gray"
+                    android:id="@+id/sort_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:drawableLeft="@android:drawable/ic_input_get"
+                        android:text="SORT BY"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:background="@android:color/darker_gray"
+                    android:id="@+id/sort_layout2"
+                    android:layout_toRightOf="@+id/sort_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:layout_below="@+id/fav_button"
+                        android:drawableRight="@android:drawable/btn_dialog"
+                        android:text="Category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/fav_button"
+                        android:drawableRight="@android:drawable/ic_delete"
+                        android:text="Favorite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:background="@android:color/darker_gray"
+                    android:layout_toRightOf="@+id/sort_layout2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                   <TextView
+                       android:id="@+id/api_quota"
+                       android:text="API QUOTA "
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content" />
+                    <TextView
+                        android:text="98 %"
+                        android:id="@+id/api_quota_value"
+                        android:layout_toRightOf="@+id/api_quota"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

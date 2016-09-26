@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TopprApp</string>
+    <string name="hint_search">search by category</string>
+    <string name="loading_msg">Please wait while loading...</string>
+</resources>
